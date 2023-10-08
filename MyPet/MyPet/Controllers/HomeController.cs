@@ -18,7 +18,7 @@ namespace MyPet.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult SobreNos()
         {
             return View();
         }
