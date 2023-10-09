@@ -19,7 +19,7 @@ public class ConsultaController : Controller
     {
         consulta.Id = ++_count;
         _lista.Add(consulta);
-        TempData["msg"] = "Personagem cadastrado!";
+        TempData["msg"] = "Consulta cadastrada!";
         return RedirectToAction("Cadastrar");
     }
 
@@ -48,10 +48,21 @@ public class ConsultaController : Controller
     [HttpPost]
     public IActionResult Excluir(int id)
     {
-        var con = _lista.First(c => c.Id == id);
+        var con = _lista.First(con => con.Id == id);
         _lista.Remove(con);
         TempData["msg"] = "Consulta Removida com sucesso!";
         return RedirectToAction("Index");
     }
+
+    [HttpGet]
+    public IActionResult Pesquisar(string nome)
+    {
+        // Filtra as consultas com base no nome fornecido
+        var consultasFiltradas = _lista.Where(consulta => consulta.Nome.Contains(nome)).ToList();
+
+        return View("Index",consultasFiltradas);
+    }
+
+    
 
 }

@@ -1,0 +1,32 @@
+﻿@model Consulta
+
+<div class="mb-3">
+    <label asp-for="Nome"></label>
+    <input asp-for="Nome" class="form-control bg-light" />
+</div>
+<div class="mb-3">
+    <label asp-for="NomeDoPet"></label>
+    <input asp-for="NomeDoPet" class="form-control bg-light" />
+</div>
+<div class="mb-3">
+    <label asp-for="TipoPet"></label>
+    <select asp-for="TipoPet" asp-items="@Html.GetEnumSelectList<TipoPet>()" class="form-select bg-light">
+        <option>Selecione</option>
+    </select>
+</div>
+<div class="mb-3">
+    <label asp-for="DataConsulta"></label>
+    <input asp-for="DataConsulta" class="form-control bg-light" />
+</div>
+<div class="mb-3">
+    <label asp-for="HoraConsulta"></label>
+    <input asp-for="HoraConsulta" class="form-control bg-light" />
+</div>
+<div class="mb-3">
+    <label asp-for="TipoPagamento"></label>
+    <select asp-for="TipoPagamento" asp-items="@Html.GetEnumSelectList<TipoPagamento>()" class="form-select bg-light">
+        <option>Selecione</option>
+    </select>
+</div>
+
+

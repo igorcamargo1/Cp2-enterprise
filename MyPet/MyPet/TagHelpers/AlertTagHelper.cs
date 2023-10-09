@@ -10,7 +10,7 @@ public class AlertTagHelper : TagHelper
         if (!string.IsNullOrEmpty(Mensagem))
         {
             output.TagName = "div";
-            output.Attributes.SetAttribute("class", "alert alert-sucess");
+            output.Attributes.SetAttribute("class", "alert alert-dismissible alert-success");
             output.Content.SetContent(Mensagem);
         }
         

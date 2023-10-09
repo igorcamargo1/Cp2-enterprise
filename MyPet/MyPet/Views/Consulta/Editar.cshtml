@@ -1,0 +1,18 @@
+﻿@model Consulta
+@{
+    ViewData["Title"] = "Editar";
+}
+
+<h1>Edição de Consulta</h1>
+<p>Edite as informação da sua consulta para realizarmos o melhor atendimento para seu pet.</p>
+
+<alert mensagem="@TempData["msg"]"></alert>
+
+<a asp-action="Index">Consultas Marcadas</a>
+
+<form asp-action="editar">
+
+    <partial name="_Form" />
+
+    <botao texto="Editar"></botao>
+</form>

@@ -6,22 +6,18 @@ public class Consulta
 {
     public int Id { get; set; }
 
-    [Display(Name ="Nome Completo")]
     public string? Nome { get; set; }
 
-    [Display(Name ="Nome do Pet")]
     public string? NomeDoPet { get; set; }
 
-    [Display(Name = "Tipo do seu pet")]
     public TipoPet TipoPet { get; set; }
 
-    [DataType(DataType.Date), Display(Name ="Data da consulta")]
+    [DataType(DataType.Date)]
     public DateTime DataConsulta { get; set; }
 
-    [DataType(DataType.Time), Display(Name = "Hora da consulta")]
+    [DataType(DataType.Time)]
     public DateTime HoraConsulta { get; set; }
 
-    [Display(Name ="Escolha o tipo de pagamento")]
     public TipoPagamento TipoPagamento { get; set; }
 
 }

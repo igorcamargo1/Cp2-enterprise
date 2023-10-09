@@ -1,0 +1,71 @@
+﻿@model List<Consulta>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Consultas</h1>
+<alert mensagem="@TempData["msg"]"></alert>
+<a asp-action="cadastrar">Cadastrar</a>
+
+<form method="get" action="@Url.Action("Pesquisar")">
+    <div class="input-group mb-3">
+        <input type="text" name="nome" class="form-control" placeholder="Pesquisar por nome">
+        <button class="btn btn-outline-secondary" type="submit">Pesquisar</button>
+    </div>
+</form>
+
+
+<table class="table table-secondary">
+    <tr>
+        <th class="">Código</th>
+        <th>Nome Cliente</th>
+        <th>Nome Pet</th>
+        <th>Tipo Pet</th>
+        <th>Data Consulta</th>
+        <th>Hora Consulta</th>
+        <th>Tipo Pagamento</th>
+        <th></th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Id</td>
+            <td>@item.Nome</td>
+            <td>@item.NomeDoPet</td>
+            <td>@item.TipoPet</td>
+            <td>@item.DataConsulta.ToShortDateString()</td>
+            <td>@item.HoraConsulta.ToShortTimeString()</td>
+            <td>@item.TipoPagamento</td>
+            <td>
+                <a asp-action="editar" asp-route-id="@item.Id" class="btn btn-sm btn-primary">Editar</a>
+                <!-- Button trigger modal -->
+                <button onclick="key.value = @item.Id" type="button" class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Remover
+                </button>
+            </td>
+        </tr>
+    }
+</table>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Confirmação</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Deseja realmente apagar a consulta marcada?
+            </div>
+            <div class="modal-footer">
+                <form asp-action="excluir">
+                    <input type="hidden" name="id" id="key" />
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Não</button>
+                    <button type="submit" class="btn btn-danger">Sim</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+

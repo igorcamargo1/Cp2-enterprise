@@ -16,6 +16,22 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\igcamargo\Documents\fiap\materias\entreprise\cp2-enterprise\MyPet\MyPet
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/igcamargo/Documents/fiap/materias/entreprise/cp2-enterprise/MyPet/MyPet/Views/Consulta/Cadastrar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uc3VsdGFcQ2FkYXN0cmFyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/igcamargo/Documents/fiap/materias/entreprise/cp2-enterprise/MyPet/MyPet/Views/Consulta/Editar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uc3VsdGFcRWRpdGFyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/igcamargo/Documents/fiap/materias/entreprise/cp2-enterprise/MyPet/MyPet/Views/Consulta/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uc3VsdGFcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/igcamargo/Documents/fiap/materias/entreprise/cp2-enterprise/MyPet/MyPet/Views/Consulta/_Form.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uc3VsdGFcX0Zvcm0uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/igcamargo/Documents/fiap/materias/entreprise/cp2-enterprise/MyPet/MyPet/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

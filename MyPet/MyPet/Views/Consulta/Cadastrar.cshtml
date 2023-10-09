@@ -1,0 +1,20 @@
+﻿@model Consulta
+@{
+    ViewData["Title"] = "Cadastrar";
+}
+
+<h1>Cadastro de Consulta</h1>
+<p>Marque sua consulta para realizarmos o melhor atendimento para seu pet.</p>
+
+<alert mensagem="@TempData["msg"]"></alert>
+
+<a asp-action="Index">Consultas Marcadas</a>
+
+<form asp-action="cadastrar">
+
+    <partial name="_Form"/>
+
+    <botao></botao>
+</form>
+
+

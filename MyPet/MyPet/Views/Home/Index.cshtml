@@ -4,6 +4,13 @@
 
 <div class="text-center">
     <h1 class="display-4">Seja Bem-vindo ao MyPet</h1>
-    <h2 class="display-5">Acesse o link abaixo para agendar sua consulta!</h2>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h3 class="display-5">Acesse o link abaixo para agendar sua consulta!</h3>
+    <a asp-action="cadastrar" asp-controller="consulta" class="link-info m-5">
+        Cadastrar Consulta
+    </a>
+    <a asp-action="Index" asp-controller="consulta" class="link-info">
+        Lista de Consultas
+    </a>
+    
 </div>
+
